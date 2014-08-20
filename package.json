@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "DEBUG=unity-server ./bin/www"
+    "start": "DEBUG=unity-server ./bin/www",
+    "debug": "DEBUG=unity-server node-dev ./bin/www"
   },
   "dependencies": {
     "express": "~4.2.0",
