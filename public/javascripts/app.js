@@ -3,7 +3,7 @@ $(function(){
   var $down_button = $('#down_button');
   var $notice = $('#notice');
   var $enemy = $('#enemy');
-  var socket = io.connect('http://daichi.local:3000');
+  var socket = io.connect();
 
   $up_button.on('click', function(){
     console.log('up');
