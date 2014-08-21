@@ -5,26 +5,25 @@ $(function(){
   var $enemy = $('#enemy');
   var socket = io.connect();
 
-  $up_button.on('click', function(){
+  $up_button.on('click', function() {
     console.log('up');
     socket.emit('up');
   });
 
-  $down_button.on('click', function(){
+  $down_button.on('click', function() {
     console.log('down');
     socket.emit('down');
   });
 
-  socket.on('enemy', function(mes){
+  socket.on('connect', function() {
+    $notice.html('サーバーと接続しました');
+  });
+
+  socket.on('enemy', function(mes) {
     console.log('enemy:', mes);
     $enemy.append('<div>' + mes + '</div>');
   });
 
-  // var socket = io.connect('http://localhost');
-  // socket.on('news', function (data) {
-  //   console.log(data);
-  //   socket.emit('my other event', { my: 'data' });
-  // });
   socket.on('newPlayer', function() {
     $notice.html('新しい敵が入りました');
   });
