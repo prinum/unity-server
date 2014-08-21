@@ -53,7 +53,4 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.locals.maxUsers = 2;
-app.locals.currentUsers = 0;
-
 module.exports = app;
